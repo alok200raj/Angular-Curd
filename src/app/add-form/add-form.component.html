@@ -1,0 +1,55 @@
+<h1 class="text-center">Employee Registration Form</h1>
+<hr>
+<form [formGroup]="empForm" (ngSubmit)="onSubmit()">
+   <div class="w-full flex justify-evenly">
+       <mat-form-field class="w-1/3 m-2" >
+           <mat-label>Name</mat-label>
+           <input matInput type="text" formControlName="name" placeholder="eg-monu"  required>
+       </mat-form-field>
+       <mat-form-field class="w-1/3 m-2" >
+        <mat-label>Gender</mat-label>
+        <select matNativeControl formControlName="gender"placeholder="eg-male"  required>
+          <option *ngFor="let gender of genders" [value]="gender">{{gender}}</option>
+        </select>
+      </mat-form-field>
+       <mat-form-field class="w-1/3 m-2" appearance="fill">
+           <mat-label>Employee Id</mat-label>
+           <input matInput type="text" formControlName="empId" placeholder="eg-5"  required>
+       </mat-form-field>
+    </div> 
+    <div class="w-full flex justify-evenly">
+
+        <mat-form-field class="w-1/2 m-2" appearance="fill">
+            <mat-label>Mobile NO</mat-label>
+            <input matInput type="text" formControlName="mobile" placeholder="eg-123456789"  required>
+        </mat-form-field>
+        <mat-form-field class="w-1/2 m-2" appearance="fill">
+            <mat-label>Experiance</mat-label>
+            <input matInput type="text" formControlName="experiance" placeholder="eg-3"  required>
+        </mat-form-field>
+        <mat-form-field class="w-1/2 m-2" appearance="fill">
+            <mat-label>Date of Joining</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="doj" placeholder="eg-01/01/2021"  required>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </div>
+    <div class="w-full flex justify-evenly">
+
+        <mat-form-field class="w-1/2 m-2" appearance="fill">
+            <mat-label>Deginataion</mat-label>
+            <input matInput type="text" formControlName="degination" placeholder="eg-Developer" required>
+        </mat-form-field>
+        <mat-form-field class="w-1/2 m-2" appearance="fill">
+            <mat-label>Department</mat-label>
+            <select matNativeControl formControlName="department" placeholder="eg-IT" required>
+                <option *ngFor="let department of departments" [value]="department">{{department}}</option>
+               
+              </select>
+        </mat-form-field>
+    </div>
+    <div class="w-1/6 flex float-right">
+    <button type="submit" mat-raised-button class="mr-2" color="primary" (submit)="onSubmit()">{{data ? 'Upadate':'Submit'}}</button>
+    <button type="button" mat-raised-button class="mr-2" color="warn" [mat-dialog-close]="false">close</button>
+</div>
+</form>

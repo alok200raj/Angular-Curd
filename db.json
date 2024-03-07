@@ -1,0 +1,48 @@
+{
+  "emplyee": [
+    {
+      "name": "rahul",
+      "empId": "5",
+      "mobile": "8799716834",
+      "doj": "2024-03-02T18:30:00.000Z",
+      "degination": "Associate",
+      "department": "Sales",
+      "gender": "Male",
+      "experiance": "3",
+      "id": "7442"
+    },
+    {
+      "name": "jyg",
+      "empId": "5",
+      "mobile": "55566",
+      "doj": "2024-03-12T18:30:00.000Z",
+      "degination": "CA",
+      "department": "Finance",
+      "gender": "Other",
+      "experiance": "5",
+      "id": "3990"
+    },
+    {
+      "id": "f055",
+      "name": "sonu kumar",
+      "empId": "25",
+      "mobile": "8799716834",
+      "doj": "2024-03-10T18:30:00.000Z",
+      "degination": "intern",
+      "department": "HR",
+      "gender": "Male",
+      "experiance": "4"
+    },
+    {
+      "id": "ff7b",
+      "name": "shayam",
+      "empId": "52",
+      "mobile": "99936969",
+      "doj": "2024-03-02T18:30:00.000Z",
+      "degination": "manger",
+      "department": "Sales",
+      "gender": "Male",
+      "experiance": "5"
+    }
+  ]
+}
